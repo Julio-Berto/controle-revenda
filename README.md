@@ -1,20 +1,128 @@
-<<<<<<< HEAD
-# React + Vite
+# Controle de Revendas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido com o objetivo de praticar React, JavaScript e Tailwind CSS através da criação de um sistema simples para controle de produtos de revenda.
 
-Currently, two official plugins are available:
+A proposta do sistema é ajudar pessoas que compram produtos para revender em plataformas como OLX e Facebook Marketplace, permitindo acompanhar valores de compra, venda, lucro, estoque e status dos produtos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias utilizadas
 
-## React Compiler
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Objetivo do projeto
 
-## Expanding the ESLint configuration
+Criar uma aplicação simples e prática para controlar produtos comprados para revenda, acompanhando informações como:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Controle-Revendas
->>>>>>> ea401538a70ba35661250bba7e9997fbc623afbc
+- Nome do produto
+- Valor de compra
+- Valor de venda
+- Lucro previsto
+- Status
+- Quantidade em estoque
+
+Além de desenvolver o sistema, o projeto também está sendo utilizado como forma de aprendizado e prática dos principais conceitos do React.
+
+## Funcionalidades atuais
+
+- Exibição de um cabeçalho reutilizável
+- Cards de resumo
+- Lista dinâmica de produtos
+- Cadastro de novos produtos
+- Controle dos produtos utilizando estado do React
+- Exibição de valores no formato de moeda brasileira
+- Cálculo de lucro previsto
+- Interface responsiva utilizando Tailwind CSS
+
+## Conceitos praticados
+
+Durante o desenvolvimento foram trabalhados conceitos como:
+
+### Componentes
+
+A aplicação foi dividida em componentes reutilizáveis, como:
+
+- `Header`
+- `SummaryCard`
+- `ProductCard`
+
+### Props
+
+As informações são enviadas entre componentes utilizando props.
+
+Por exemplo, o componente de produto recebe um objeto contendo as informações do produto que deve ser exibido.
+
+### Estado com useState
+
+O `useState` está sendo utilizado para armazenar informações que podem mudar durante o uso da aplicação.
+
+Atualmente existem estados para:
+
+- Lista de produtos
+- Nome do produto
+- Valor de compra
+- Valor de venda
+- Status
+- Quantidade
+
+### Renderização de listas
+
+Os produtos são armazenados em um array e exibidos dinamicamente utilizando o método `.map()`.
+
+### Spread Operator
+
+O operador `...` é utilizado para preservar os produtos existentes ao adicionar um novo produto ao array.
+
+### Formulários controlados
+
+Os campos do formulário são controlados pelo React através de `value`, `onChange` e estados.
+
+### Formatação de moeda
+
+Os valores financeiros são armazenados como números e formatados apenas durante a exibição utilizando `Intl.NumberFormat`.
+
+### Tailwind CSS
+
+O Tailwind está sendo utilizado para estilização e criação de layouts responsivos.
+
+O layout dos cards utiliza diferentes quantidades de colunas dependendo do tamanho da tela.
+
+## Estrutura atual
+
+```text
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── ProductCard.jsx
+│   └── SummaryCard.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Próximas melhorias
+
+Algumas funcionalidades planejadas para as próximas versões:
+
+- Validação do formulário
+- Limpar os campos após cadastrar um produto
+- Editar produtos
+- Excluir produtos
+- Registrar uma venda
+- Diferenciar lucro previsto de lucro real
+- Calcular automaticamente os cards de resumo
+- Salvar os produtos no LocalStorage
+- Filtros por status
+- Pesquisa de produtos
+- Melhorias visuais
+- Histórico de vendas
+- Gráficos e relatórios
+- Integração futura com banco de dados
+
+## Aprendizado
+
+Este projeto está sendo desenvolvido passo a passo, com foco no entendimento dos conceitos utilizados e não apenas na construção da aplicação final.
+
+A intenção é utilizar o projeto como parte do portfólio de desenvolvimento front-end e também como prática dos fundamentos do React.
