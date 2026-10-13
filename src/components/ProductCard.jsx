@@ -1,4 +1,4 @@
-function ProductCard({ produto }) {
+function ProductCard({ produto, onVender }) {
     const formatarMoeda = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
@@ -13,6 +13,7 @@ function ProductCard({ produto }) {
             <p>Status: {produto.status}</p>
             <p>Quantidade: {produto.quantidade}</p>
             <p>Lucro previsto: {formatarMoeda.format(produtoLucro)}</p>
+            <button onClick={() => onVender(produto.id)} className="bg-green-500 text-white p-2 rounded m-2" disabled={produto.status === 'Vendido'}>Marcar como Vendido</button>
         </div >
     )
 }
